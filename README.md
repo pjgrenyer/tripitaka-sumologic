@@ -68,3 +68,35 @@ dist
   }
 }
 ```
+## Bable
+
+```npm i --save-dev babel-cli babel-preset-env```
+```npm i --save-dev @babel/preset-env @babel/preset-typescript```
+
+```touch babel.config.js```
+
+```
+// babel.config.js
+module.exports = {
+    presets: [
+      ['@babel/preset-env', {targets: {node: 'current'}}],
+      '@babel/preset-typescript',
+    ],
+  };
+```
+
+## Prettier
+
+```npm i --save-dev prettier```
+
+```touch .prettierrc```
+
+```
+{
+    "printWidth": 180,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": true
+}
+```
