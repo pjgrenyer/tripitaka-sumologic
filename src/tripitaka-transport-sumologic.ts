@@ -1,4 +1,4 @@
-import { Transport, TransportFactory } from 'tripitaka';
+import { Transport } from 'tripitaka';
 import SumoLogger, { SumoLoggerOptions } from 'sumo-logger';
 
 const sumoLogic = (options: SumoLoggerOptions): Transport => {
