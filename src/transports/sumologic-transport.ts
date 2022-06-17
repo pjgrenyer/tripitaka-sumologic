@@ -1,7 +1,7 @@
 import { Transport } from 'tripitaka';
 import SumoLogger, { SumoLoggerOptions } from 'sumo-logger';
 
-const sumoLogic = (options: SumoLoggerOptions): Transport => {
+const sumoLogicTransport = (options: SumoLoggerOptions): Transport => {
     const sumoLogger = new SumoLogger(options);
 
     return ({ level, record }) => {
@@ -10,4 +10,4 @@ const sumoLogic = (options: SumoLoggerOptions): Transport => {
     };
 };
 
-export { sumoLogic };
+export { sumoLogicTransport };

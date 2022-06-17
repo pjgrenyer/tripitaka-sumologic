@@ -1,7 +1,8 @@
 import { SumoLoggerOptions } from 'sumo-logger';
-import { Logger } from 'tripitaka';
+import { Logger, transports } from 'tripitaka';
 import { v4 } from 'uuid';
-import { sumoLogic } from '../../src/transports/sumologic';
+import { sumoLogicTransport } from '../src/transports/sumologic-transport';
+import { sumoLogicProcessor } from '../src/processors/sumologic-processor';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -23,7 +24,8 @@ const options: SumoLoggerOptions = {
 describe('Transport Sumologic', () => {
     it('Smoke test', () => {
         const logger = new Logger({
-            transports: [sumoLogic(options)],
+            processors: [sumoLogicProcessor()],
+            transports: [sumoLogicTransport(options), transports.stream()],
         });
         const book = {
             title: 'Monkey',
