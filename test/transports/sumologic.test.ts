@@ -1,7 +1,7 @@
 import { SumoLoggerOptions } from 'sumo-logger';
 import { Logger } from 'tripitaka';
 import { v4 } from 'uuid';
-import { sumoLogic } from '../src/tripitaka-transport-sumologic';
+import { sumoLogic } from '../../src/transports/sumologic';
 import dotenv from 'dotenv';
 dotenv.config();
 
