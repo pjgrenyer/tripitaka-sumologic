@@ -1,5 +1,5 @@
 import { SumoLoggerOptions } from 'sumo-logger';
-import { Logger, transports } from 'tripitaka';
+import { Level, Logger, transports } from 'tripitaka';
 import { v4 } from 'uuid';
 import { sumoLogicTransport } from '../src/transports/sumologic-transport';
 import { sumoLogicProcessor } from '../src/processors/sumologic-processor';
@@ -25,13 +25,15 @@ describe('Transport Sumologic', () => {
     it('Smoke test', () => {
         const logger = new Logger({
             processors: [sumoLogicProcessor()],
-            transports: [sumoLogicTransport(options), transports.stream()],
+            transports: [sumoLogicTransport(options, { threshold: Level.ERROR }), transports.stream()],
         });
         const book = {
             title: 'Monkey',
             author: "Wu Ch'eng-en",
             ISBN10: '9780140441116',
         };
-        logger.info('Retrieved book', { book });
+        logger.info('(INFO) Retrieved book', { book });
+        logger.warn('(WARN) Retrieved book', { book });
+        logger.error('(ERROR) Retrieved book', { book });
     });
 });
