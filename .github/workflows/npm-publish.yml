@@ -1,13 +1,13 @@
 name: Node.js Publish
 
-# on:
-#   release:
-#     types: [created]
-
 on:
-    push:
-        branches:
-            - feature/actions
+    release:
+        types: [created]
+
+# on:
+#     push:
+#         branches:
+#             - feature/actions
 
 jobs:
     build:
@@ -33,7 +33,6 @@ jobs:
               with:
                   node-version: '14.x'
                   registry-url: https://registry.npmjs.org/
-            - run: echo ${{ secrets.SUMO_LOGIC_ENDPOINT }}
             - run: npm install -g npm
             - run: npm ci
             - run: npm run build

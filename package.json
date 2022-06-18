@@ -1,6 +1,6 @@
 {
     "name": "tripitaka-sumologic",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
     "scripts": {
         "clean": "rimraf dist",
@@ -38,5 +38,13 @@
         "prettier": "^2.7.1"
     },
     "main": "dist/index.js",
-    "types": "dist/index.d.ts"
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pjgrenyer/tripitaka-sumologic.git"
+    },
+    "bugs": {
+        "url": "https://github.com/pjgrenyer/tripitaka-sumologic/issues"
+    },
+    "homepage": "https://github.com/pjgrenyer/tripitaka-sumologic"
 }
