@@ -1,8 +1,11 @@
-# tripitaka-sumologic
+# Tripitaka Sumologic
 
 [![NPM version](https://img.shields.io/npm/v/tripitaka-sumologic.svg?style=flat-square)](https://www.npmjs.com/package/tripitaka-sumologic)
 [![NPM downloads](https://img.shields.io/npm/dm/tripitaka-sumologic.svg?style=flat-square)](https://www.npmjs.com/package/tripitaka-sumologic)
 [![Code Style](https://img.shields.io/badge/code%20style-prettier-brightgreen.svg)](https://github.com/prettier/prettier)
+
+Tripitaka Sumologic provides a transport and processor for the [Tripitaka](https://www.npmjs.com/package/tripitaka) logger, which are suitable for publishing logs to [Sumologic](https://www.sumologic.com/).
+
 
 ## TL;DR
 
