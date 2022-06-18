@@ -1,6 +1,6 @@
 {
     "name": "tripitaka-sumologic",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
     "scripts": {
         "clean": "rimraf dist",
@@ -9,7 +9,7 @@
         "test": "jest --coverage",
         "lint": "eslint . --ext .ts",
         "prepare": "husky install",
-        "format": "npx prettier --write 'src/**/*.ts' 'test/**/*.ts' '*.js' '*.json'"
+        "format": "npx prettier --write 'src/**/*.ts' 'test/**/*.ts' '*.js' '*.json' '**/*.yml'"
     },
     "author": "",
     "license": "ISC",
@@ -39,7 +39,12 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
-    }
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pjgrenyer/tripitaka-sumologic.git"
+    },
+    "bugs": {
+        "url": "https://github.com/pjgrenyer/tripitaka-sumologic/issues"
+    },
+    "homepage": "https://github.com/pjgrenyer/tripitaka-sumologic"
 }
