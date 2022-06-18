@@ -25,7 +25,7 @@ describe('Transport Sumologic', () => {
     it('Smoke test', () => {
         const logger = new Logger({
             processors: [sumoLogicProcessor()],
-            transports: [sumoLogicTransport(options, { threshold: Level.ERROR }), transports.stream()],
+            transports: [sumoLogicTransport(options, { threshold: Level.WARN }), transports.stream()],
         });
         const book = {
             title: 'Monkey',
