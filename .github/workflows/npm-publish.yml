@@ -7,7 +7,7 @@ name: Node.js Publish
 on:
   push:
     branches:
-      - feature/action
+      - develop
 
 jobs:
   build:
