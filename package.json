@@ -9,7 +9,7 @@
         "test": "jest --coverage",
         "lint": "eslint . --ext .ts",
         "prepare": "husky install",
-        "format": "npx prettier --write 'src/**/*.ts' 'test/**/*.ts' '*.js' '*.json'"
+        "format": "npx prettier --write 'src/**/*.ts' 'test/**/*.ts' '*.js' '*.json' '**/*.yml'"
     },
     "author": "",
     "license": "ISC",
