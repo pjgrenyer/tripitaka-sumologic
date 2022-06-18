@@ -1,5 +1,9 @@
 # tripitaka-sumologic
 
+[![NPM version](https://img.shields.io/npm/v/tripitaka-sumologic.svg?style=flat-square)](https://www.npmjs.com/package/tripitaka-sumologic)
+[![NPM downloads](https://img.shields.io/npm/dm/tripitaka-sumologic.svg?style=flat-square)](https://www.npmjs.com/package/tripitaka-sumologic)
+[![Code Style](https://img.shields.io/badge/code%20style-prettier-brightgreen.svg)](https://github.com/prettier/prettier)
+
 ## TL;DR
 
 ```js
