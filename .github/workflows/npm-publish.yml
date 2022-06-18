@@ -7,7 +7,7 @@ name: Node.js Publish
 on:
   push:
     branches:
-      - develop
+      - feature/actions
 
 jobs:
   # build:
@@ -23,7 +23,7 @@ jobs:
   #     - run: npm test
 
   publish-npm:
-    needs: build
+ #   needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
