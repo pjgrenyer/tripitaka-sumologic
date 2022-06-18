@@ -1,9 +1,11 @@
 {
-    "name": "tripitaka-transport-sumologic",
+    "name": "tripitaka-sumologic",
     "version": "0.0.1",
     "description": "",
-    "main": "index.js",
     "scripts": {
+        "clean": "rimraf dist",
+        "build": "npm run clean && tsc",
+        "postbuild": "cpy '**/*' '!**/*.ts' '!**/*.tsx' ../dist/ --cwd=src/ --no-overwrite --parents",
         "test": "jest --coverage",
         "lint": "eslint . --ext .ts",
         "prepare": "husky install",
@@ -28,9 +30,16 @@
         "@typescript-eslint/parser": "^5.28.0",
         "babel-cli": "^6.26.0",
         "babel-preset-env": "^1.7.0",
+        "cpy": "^9.0.1",
+        "cpy-cli": "^4.1.0",
         "dotenv": "^16.0.1",
         "eslint": "^8.17.0",
         "jest": "^28.1.1",
         "prettier": "^2.7.1"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
     }
 }
