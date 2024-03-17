@@ -1,8 +1,10 @@
 import { Processor } from 'tripitaka';
 
 const sumoLogicProcessor = (): Processor => {
-    return ({ level, message, ctx }) => {
-        return `[${level.name}] - ${message} ${JSON.stringify(ctx, null, 2)}`;
+    return ({ level, message, record }) => {
+        const clone = Object.assign({}, record);
+        delete clone.message;
+        return `[${level.name}] - ${message} ${JSON.stringify(clone, null, 2)}`;
     };
 };
 
